@@ -28,7 +28,7 @@ milliseconds = milliseconds + 10
  console.log(minutes)
 
 digits.innerHTML= minutes + ':' + String(seconds).padStart(2, '0') + ':' + milliseconds
-
+()
 
 
 }, 10)
