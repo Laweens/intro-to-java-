@@ -49,6 +49,7 @@ function stop () {
  }
    
  function restart () {
+    startButton.disabled = false 
     
 
     clearInterval(interval)
