@@ -10,8 +10,9 @@ let interval;
 
 function start () {
  
-    restart()
-
+    startButton.disabled = true 
+ 
+    
 
    interval = setInterval (function () {
 milliseconds = milliseconds + 10
@@ -38,6 +39,7 @@ digits.innerHTML= minutes + ':' + String(seconds).padStart(2, '0') + ':' + milli
    
 function stop () {
     
+     startButton.disabled = false 
 
       clearInterval(interval)
       digits.innerHTML= minutes + ':' + String(seconds).padStart(2, '0') + ':' + String(milliseconds).padStart(2, '0')
@@ -55,8 +57,22 @@ function stop () {
     minutes = 0
     digits.innerHTML= minutes + ':' + String(seconds).padStart(2, '0') + ':' + String(milliseconds).padStart(2, '0')
 
-
+     const myList = document.getElementById('mylist')
+     myList.innerHTML = "";
 
 
  }
     
+  
+
+ function lapse () {
+     let myList = document.getElementById('mylist')
+
+       let newListItem = document.createElement('li')
+       newListItem.textContent = digits.innerHTML= minutes + ':' + String(seconds).padStart(2, '0') + ':' + String(milliseconds).padStart(2, '0')
+       myList.appendChild(newListItem)
+
+       
+       
+
+ }
