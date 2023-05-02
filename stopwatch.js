@@ -4,6 +4,8 @@ let minutes = 0
 
 let digits = document.getElementById('digits')
 
+let startButton = document.getElementById('startButton')
+
 let interval;
 
 function start () {
