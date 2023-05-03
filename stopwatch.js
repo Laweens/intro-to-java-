@@ -8,9 +8,12 @@ let startButton = document.getElementById('startButton')
 
 let interval;
 
+lapseButton.disabled = true
+
 function start () {
- 
+    
     startButton.disabled = true 
+    lapseButton.disabled = false
  
     
 
@@ -40,6 +43,8 @@ digits.innerHTML= minutes + ':' + String(seconds).padStart(2, '0') + ':' + milli
 function stop () {
     
      startButton.disabled = false 
+     lapseButton.disabled = true 
+     
 
       clearInterval(interval)
       digits.innerHTML= minutes + ':' + String(seconds).padStart(2, '0') + ':' + String(milliseconds).padStart(2, '0')
@@ -67,6 +72,7 @@ function stop () {
   
 
  function lapse () {
+    
      let myList = document.getElementById('mylist')
 
        let newListItem = document.createElement('li')
